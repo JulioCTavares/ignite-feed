@@ -27,6 +27,16 @@ const Post = () => {
           <a href="">#rocketseat</a>
         </p>
       </div>
+
+      <form className={styles.commentArea}>
+        <strong> Deixe seu comentário</strong>
+
+        <textarea placeholder='Deixe um comentário' />
+
+        <footer>
+          <button type="submit"> Comentar</button>
+        </footer>
+      </form>
     </article>
   )
 }
