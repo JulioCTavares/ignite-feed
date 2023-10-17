@@ -1,3 +1,4 @@
+import Comment from './Comment';
 import styles from './Post.module.css';
 
 const Post = () => {
@@ -37,6 +38,10 @@ const Post = () => {
           <button type="submit"> Comentar</button>
         </footer>
       </form>
+
+      <div className={styles.commentList}>
+        <Comment />
+      </div>
     </article>
   )
 }
