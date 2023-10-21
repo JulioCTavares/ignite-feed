@@ -30,14 +30,6 @@
   flex-direction: column;
 }
 
-.avatar {
-  width: calc(3rem + 6px);
-  height: calc(3rem + 6px);
-  border-radius: 8px;
-  border: 4px solid var(--gray-800);
-  outline: 2px solid var(--green-500);
-}
-
 .authorInfo strong {
   color: var(--gray-100);
   line-height: 1.6;
