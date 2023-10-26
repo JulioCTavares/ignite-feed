@@ -3,7 +3,7 @@ import styles from "./Comment.module.css";
 import { ThumbsUp } from "@phosphor-icons/react/dist/ssr";
 import Avatar from "./Avatar";
 
-const Comment = () => {
+const Comment = ({content}) => {
   return (
     <div className={styles.comment}>
       <Avatar hasBorder={false} imgUrl="https://github.com/juliocTavares.png" />
@@ -26,7 +26,7 @@ const Comment = () => {
             </button>
           </header>
 
-          <p>Muito bom Devon, parabéns!! 👏👏</p>
+          <p>{content}</p>
         </div>
 
         <footer>
