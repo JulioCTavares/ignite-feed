@@ -40,6 +40,12 @@ const Post = ({ author, publishedAt, content }) => {
     setComments(commentsWithoutDeleteOne);
   };
 
+  const handleInvalidComment = () => {
+    event.target.setCustomValidity('Esse campo é obrigatório')
+  }
+
+  const isEmptyComment = newComment.length === 0;
+
   return (
     <article className={styles.post}>
       <header className={styles.container}>
@@ -81,10 +87,13 @@ const Post = ({ author, publishedAt, content }) => {
           placeholder="Deixe um comentário"
           value={newComment}
           onChange={handleNewCommentChange}
+          onInvalid={handleInvalidComment}
+          required
         />
 
         <footer>
-          <button type="submit"> Comentar</button>
+          <button type="submit" disabled={isEmptyComment}> 
+          Comentar</button>
         </footer>
       </form>
 
